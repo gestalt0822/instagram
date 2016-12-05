@@ -28,6 +28,10 @@ class PhotosController < ApplicationController
     redirect_to photos_path
   end
 
+  def show
+    @photo = Photo.find(params[:id])
+  end
+
   private
     def photos_params
       params.require(:photo).permit(:name, :title, :photo, :content)
