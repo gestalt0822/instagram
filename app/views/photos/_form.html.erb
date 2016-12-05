@@ -1,0 +1,15 @@
+<div class="form-group">
+
+  <%= form_for(@photo) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "photo_content" %>
+    <br />
+    <%= f.label :content %>
+    <%= f.text_field :content, :class => "photo_content" %>
+    <br />
+    <%= f.submit %>
+  <% end %>
+
+  <%= link_to "一覧ページに戻る", photos_path, :class => "btn btn-success"  %>
+
+</div>
