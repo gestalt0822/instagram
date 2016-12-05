@@ -12,6 +12,10 @@ class PhotosController < ApplicationController
     redirect_to photos_path
   end
 
+  def edit
+    @photo = Photo.find(params[:id])
+  end
+  
   private
     def photos_params
       params.require(:photo).permit(:name, :title, :photo, :content)

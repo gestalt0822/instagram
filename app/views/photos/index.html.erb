@@ -3,6 +3,7 @@
 <% @photos.each do |photo| %>
   <p>タイトル:<%= photo.title %></p>
   <p>本文：<%= photo.content %></p>
+  <%= link_to "投稿を編集する", edit_photo_path(photo.id) %>
 <% end %>
 
 <%= link_to "新規投稿", new_photo_path %>
