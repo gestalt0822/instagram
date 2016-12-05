@@ -1,3 +1,8 @@
-<div>
-  投稿一覧ページです
-</div>
+<h1>投稿一覧ページです</h1>
+
+<% @photos.each do |photo| %>
+  <p>タイトル:<%= photo.title %></p>
+  <p>本文：<%= photo.content %></p>
+<% end %>
+
+<%= link_to "新規投稿", new_photo_path %>
