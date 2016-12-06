@@ -37,3 +37,9 @@ end
 gem 'rails_12factor', group: :production
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+group :development do
+  gem 'dotenv-rails'
+end
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
