@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'top/index'
 
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
   resources :photos, only: [:index, :new, :create, :edit, :update, :destroy, :show]
   root 'top#index'
   # The priority is based upon order of creation: first created -> highest priority.
