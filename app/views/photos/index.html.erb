@@ -2,7 +2,7 @@
   <div class="post">
   <h4>タイトル: <%= photo.title %></h4>
 
-<%= image_tag photo.picture %>
+<%= image_tag photo.picture, size: '300x200' %>
   <p>投稿者： <strong><%= photo.user.name %></strong>さん</p>
   <p>本文： <%= photo.content %></p>
   <%= link_to "編集", edit_photo_path(photo.id), class: 'btn btn-default btn-sm btn btn-success' %>
