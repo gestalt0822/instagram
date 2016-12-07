@@ -39,8 +39,10 @@ ul#navigation{
     width: 380px;
     padding: 0px;
     //border: 1px solid #00f;
-    padding-top:30px;
-    margin-left: 100px;
+    float: right;
+    margin-top:30px;
+    margin-right: 20px;
+    background-color: #fff;
 }
 
 #navigation li{
@@ -67,7 +69,7 @@ ul#navigation{
 
 #right-menu{
    height: 80px;
-   position: relative;
+   //border:1px solid #000;
 }
 
 #left-menu{

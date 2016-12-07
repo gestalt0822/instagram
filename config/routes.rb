@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
   }
-  resources :photos, only: [:index, :new, :create, :edit, :update, :destroy, :show]
+  resources :photos
   root 'top#index'
 
   if Rails.env.development?
