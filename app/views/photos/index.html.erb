@@ -1,7 +1,8 @@
 <% @photos.each do |photo| %>
   <div class="post">
-  <p>タイトル:<%= photo.title %></p>
-  <p>本文：<%= photo.content %></p>
+  <h4>タイトル: <%= photo.title %></h4>
+  <p>投稿者： <strong><%= photo.user.name %></strong>さん</p>
+  <p>本文： <%= photo.content %></p>
   <%= link_to "編集", edit_photo_path(photo.id), class: 'btn btn-default btn-sm btn btn-success' %>
   <%= link_to "詳細", photo_path(photo.id), medhod: :show, class: 'btn btn-default btn-sm btn btn-primary' %>
   <%= link_to "削除", photo_path(photo.id), method: :delete, class: 'btn btn-default btn-sm btn btn-danger' %>
