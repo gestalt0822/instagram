@@ -3,20 +3,78 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-    background-color:#cff;
+    background-color:rgb(250,250,250);
 }
 
 header{
-    background-color:#6cf;
-    height:70px;
+    background-color:#fff;
+    height:80px;
     width:100%;
+    border-bottom: 1px solid #ccc;
 }
 
-header #title{
+header#title{
     font-size:14pt;
     color:#fff;
     padding:10px;
     font-style:bold;
+}
+
+ul#navigation{
+    width: 380px;
+    padding: 0px;
+    //border: 1px solid #00f;
+    padding-top:30px;
+    margin-left: 100px;
+}
+
+#navigation li{
+  display: inline;
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+#navigation li a{
+  color: #000;
+}
+
+img#top_image{
+width: 800px;
+height: 412px;
+margin: 0px;
+padding: 0px;
+background-color: rgb(250,250,250);
+//border: 1px solid #000;
+}
+
+#logo {
+    //border: 1px solid #000;
+    //background-color: #999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0px 0px 0px 40px;
+    width: 269px;
+    height: 35px;
+}
+
+#logo img{
+  margin: 0px;
+  padding: 0px;
+}
+
+#top_message{
+  background-color: rgb(250,250,250);
+}
+
+#right-menu{
+  height: 80px;
+  position: relative;
+}
+
+#left-menu{
+    height: 80px;
 }
 
 .photo{
@@ -33,12 +91,24 @@ header #title{
 }
 
 .contents{
-    background-color: #fff;
+    background-color: rgb(250,250,250);
 }
 
+.container{}
+
+.row{}
+
+.post{
+      margin: 20px 0px 0px 0px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+}
 .form-group{
     height: 80%;
 }
+
+
 
 .photo_content{
     width: 100%;

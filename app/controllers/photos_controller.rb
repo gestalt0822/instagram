@@ -10,8 +10,12 @@ class PhotosController < ApplicationController
   end
 
   def create
-    Photo.create(photos_params)
-    redirect_to photos_path
+    @photo = Photo.new(photos_params)
+    if @photo.save
+      redirect_to photos_path, notice: "投稿しました！"
+    else
+      render 'new'
+    end
   end
 
   def edit
