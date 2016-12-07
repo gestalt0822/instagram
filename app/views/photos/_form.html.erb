@@ -15,6 +15,9 @@
     <%= f.label :タイトル %>
     <%= f.text_field :title, :class => "form-control" %>
     <br />
+    <%= image_tag @photo.picture %>
+    <%= f.file_field :picture %>
+    <%= f.hidden_field :picture_cache %><br />
     <%= f.label :ひとこと %>
     <%= f.text_field :content, :class => "form-control" %>
     <br />
