@@ -22,6 +22,7 @@ module Instagram
     #http://blog.mknkisk.com/mongoid-translation-missing/
     #config.i18n.fallbacks = {ja: :en}
     # Do not swallow errors in after_commit/after_rollback callbacks.
+     config.action_view.field_error_proc = proc { |html_tag, _| html_tag }
     config.active_record.raise_in_transactional_callbacks = true
   end
 end

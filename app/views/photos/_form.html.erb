@@ -1,20 +1,12 @@
 <div class="form-group post">
 
   <%= form_for(@photo) do |f| %>
-    <% if @photo.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= @photo.errors.count %>件のエラーがあります。</h2>
-        <ul>
-          <% @photo.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <%= f.error_messages! %>
 
     <%= f.label :タイトル %>
     <%= f.text_field :title, :class => "form-control" %>
     <br />
+    <%= f.label :画像 %>  
     <%= image_tag @photo.picture %>
     <%= f.file_field :picture %>
     <%= f.hidden_field :picture_cache %><br />
