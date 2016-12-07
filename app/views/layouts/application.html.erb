@@ -9,19 +9,27 @@
 <body>
 
 <header>
-  <p id="title">Ese-Instagram</p>
-    <ul>
-      <li><%= link_to 'トップページ', root_path %></li>
-      <li><%= link_to '投稿一覧', photos_path %></li>
-      <% if user_signed_in? %>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-        <li><%= link_to 'マイページ', edit_user_registration_path %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path %></li>
-        <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-      <% end %>
-    </ul>
-  </p>
+   <div class="row">
+     <div class="col-md-6" id="left-menu">
+       <div id ="logo">
+         <img src="<%= asset_path "camera.jpg" %>">
+         <img src="<%= asset_path "Ese_Instagram.jpg" %>">
+       </div>
+    </div>
+    <div class="col-md-6" id="right-menu">
+       <ul id="navigation">
+         <li><%= link_to 'トップページ', root_path %></li>
+         <li><%= link_to '投稿一覧', photos_path %></li>
+         <% if user_signed_in? %>
+           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+           <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+         <% else %>
+           <li><%= link_to 'ログイン', new_user_session_path %></li>
+           <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+         <% end %>
+        </ul>
+     </div>
+  </div>
 </header>
 
 <div class="container">
