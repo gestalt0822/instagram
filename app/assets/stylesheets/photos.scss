@@ -56,9 +56,11 @@ ul#navigation{
 }
 
 #top_image{
-   width: 800px;
-   height: 412px;
-   margin: 0px auto;
+   //width: 800px;
+   //height: 412px;
+   //margin: 0px auto;
+   margin: 0px;
+//   border:1px solid #f00;
    padding: 0px;
    background-color: rgb(250,250,250);
 }
@@ -91,6 +93,18 @@ ul#navigation{
 
 .contents{
     background-color: rgb(250,250,250);
+//    border:1px solid #0f0;
+    padding: 0px;
+}
+
+.container{
+//  margin: 0px;
+//  padding: 0px;
+}
+
+.row{
+//  margin: 0px;
+//  padding: 0px;
 }
 
 .post{
