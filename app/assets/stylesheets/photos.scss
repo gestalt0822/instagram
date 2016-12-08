@@ -17,96 +17,78 @@ header{
 
 #left-menu{
     height: 80px;
-//    border: 1px solid #000;
 }
 
 #right-menu{
     height: 80px;
-//    border: 1px solid #000;
 }
 
 #logo {
     width: 225px;
     height: 35px;
-    margin: 20px 0px 0px 20px;
+    margin: 25px 0px 0px 20px;
     padding: 0px;
     float: left;
-//    border: 1px solid #000;
 }
 
 .btn-group{
+   width: 200px;
    padding: 20px 100px 0px 0px;
    float: right;
 }
 
-#logo img{
-   margin: 0px;
-   padding: 0px;
-//   border:1px #000 solid;
-}
+//application.html.erbのヘッダー部分ここまで
 
-.photo{
-    border-top: 1px solid #999;
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 10px;
-}
-
-.new_photo_button{
-    width: 500px;
-    padding: 15px;
-    margin-bottom: 10px;
-}
+//コンテンツ部分ここから
 
 .contents{
     background-color: rgb(250,250,250);
-//    border:1px solid #0f0;
     padding: 0px;
 }
 
-.container{
-//  margin: 0px;
-//  padding: 0px;
-}
-
-.row{
-//  margin: 0px;
-//  padding: 0px;
-}
-
 .post{
-    margin: 30px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
     padding: 20px;
     border: 1px solid #ccc;
-//    background-color: #fff;
+    background-color: #fff;
+}
+
+h2{
+    margin: 0px 0px 20px 0px;
+    color: #39f;
+}
+
+h3{
+    margin: 0px 0px 15px 0px;
 }
 
 .form-group{
-    height: 80%;
 }
 
-.photo_content{
-    width: 100%;
-    height: 150px;
-    margin: 20px 0px 20px 0px;
-    border:1px solid #999;
+//「投稿」などのボタンを囲むdiv
+
+.actions{
+  margin: 30px 0px 0px 0px;
 }
 
+//トップページの画像
 
 #top_image{
-   //width: 800px;
-   //height: 412px;
-   //margin: 0px auto;
+
    margin: 0px;
-//   border:1px solid #f00;
    padding: 0px;
    background-color: rgb(250,250,250);
 }
+
+
+//ログインのフラッシュメッセージ
 
 #top_message{
    background-color: rgb(250,250,250);
 }
 
+//devies関連（Sign in with Facebookなど）リンク
 
-
-//application.html.erbのヘッダー部分ここまで
+.deviselinks{
+  margin: 20px 0px 0px 10px;
+}

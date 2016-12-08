@@ -1,15 +1,13 @@
 <div class="post">
-<h2>詳細ページ</h2>
+  <h2>詳細ページ</h2>
 
-<%= form_for(@photo) do |f| %>
-  <%= f.label :title %>
-  <%= @photo.title %>
-  <br />
-  <%= image_tag @photo.picture %><br />
-  <%= f.label :content %>
-  <%= @photo.content %>
-  <br />
-<% end %>
+  <%= form_for(@photo) do |f| %>
+    <%= f.label :title %>
+    <%= @photo.title %><br />
+    <%= image_tag @photo.picture,  size: '700x525' %><br />
+    <%= f.label :content %>
+    <%= @photo.content %><br />
+  <% end %>
 
-<%= link_to "一覧ページに戻る", photos_path %>
+  <%= link_to "一覧ページに戻る", photos_path %>
 </div>
