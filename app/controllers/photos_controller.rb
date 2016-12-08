@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_photo, only: [:edit, :update, :destroy, :show]
 
   def index
     @photos = Photo.all
@@ -20,27 +21,27 @@ class PhotosController < ApplicationController
   end
 
   def edit
-    @photo = Photo.find(params[:id])
   end
 
   def update
-    @photo = Photo.find(params[:id])
     @photo.update(photos_params)
     redirect_to photos_path
   end
 
   def destroy
-    @photo = Photo.find(params[:id])
     @photo.destroy
     redirect_to photos_path
   end
 
   def show
-    @photo = Photo.find(params[:id])
   end
 
   private
-    def photos_params
-      params.require(:photo).permit(:title, :content, :picture)
-    end
+  def photos_params
+    params.require(:photo).permit(:title, :content, :picture)
+  end
+
+  def set_photo
+    @photo = Photo.find(params[:id])
+  end
 end
