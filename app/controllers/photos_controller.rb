@@ -27,13 +27,17 @@ class PhotosController < ApplicationController
   end
 
   def update
-    @photo.update(photos_params)
-    redirect_to photos_path
+    if @photo.user_id == current_user.id
+      @photo.update(photos_params)
+      redirect_to photos_path
+    end
   end
 
   def destroy
-    @photo.destroy
-    redirect_to photos_path
+    if @photo.user_id == current_user.id
+      @photo.destroy
+      redirect_to photos_path
+    end
   end
 
   def show
