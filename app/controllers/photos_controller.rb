@@ -21,6 +21,9 @@ class PhotosController < ApplicationController
   end
 
   def edit
+    unless @photo.user_id == current_user.id
+      redirect_to root_path, notice: "自分の投稿以外は編集できません！"
+    end
   end
 
   def update
